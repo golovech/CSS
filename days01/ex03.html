@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* 내부적 스타일 적용방법(internal) */
+    /* 한 페이지 안에 적용할 스타일 */
+
+    /* 100점 */
+    #demo{
+        background-color: blue;
+    }
+
+    /* 10점 */
+    .second{
+        background-color: gray;
+    }
+
+    /* 1점 */
+    p{
+        background-color: red !important;
+    }
+</style>
+</head>
+<body>
+    <!-- 
+        [ CSS 규칙 중,   !important 란? ]
+        일반적인 것보다 더~ 중요하다. 는 뜻. (특이성 무시)
+        !important 규칙을 적용하면 해당 요소의 특정 속성에 대한 
+        이전에 설정된 모든 스타일은 무시되고, 새로! 스타일이 적용된다.
+        남발하는것은 좋지 않다.
+    -->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="second">A aliquid sapiente veritatis cupiditate?</p>
+    <p>Facere ipsam cupiditate molestiae quam!</p>
+    <p id="demo">Eligendi sed suscipit minima minus.</p>
+</body>
+</html>

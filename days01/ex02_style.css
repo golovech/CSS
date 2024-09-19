@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+    /*  css를 적용하는 법 
+    1. head 안에 style 태그 사용 : 내부적(internal) css 적용방법 */
+    /* 
+        [ css selector(선택자) ]
+        1) 태그명(태그 순서대로 덮어씌워 적용)
+        2) #아이디명(우선순위로 적용)
+              ↓
+        [ css 특이성 ]
+        - 동일한 요소를 가리키는 css 규칙이 두 개 이상 있는 경우
+          <특이성값>이 가장 높은 selector가 적용된다.
+        - 특이성 == 점수 == 순위
+           ㄴ 최종적으로 어떤 스타일이 적용될지를 결정하는 점수
+           ㄴ 특이성을 계산하는 방법
+              1)  태그명     1점
+              2) #아이디명  100점
+              3) .클래스명   10점
+    */
+
+    /* 특이성 100 + 1 + 100 + 10점 */
+    #xx p#first .last{
+        color: lightcoral;
+    }
+
+    /* 범용 선택자 0점 */
+    *{ 
+        
+    }
+
+    /* 101점 (1 + 100점) */
+    p#first{
+        color: green;
+    }
+
+    /* 100점 */
+    #first{
+        color: aquamarine;
+    }
+
+    /* 11점 (1+10점) */
+    p.last{
+        background-color: aqua;
+    }
+
+    /* 10점 */
+    .last{
+        background-color: yellowgreen;
+    }
+
+    /* 1점 */
+    p{ 
+        color: pink;
+        text-align: center;
+    }
+
+    /* 1점 */
+    p{ 
+        color: blue;
+    }
