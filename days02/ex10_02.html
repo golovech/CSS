@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* 쇼핑몰 상품 간략히 보는 페이지랑 똑같다. */
+    .imgbox{
+        width: 120px;
+        border: 1px solid gray;
+        padding: 6px;
+        margin: 4px;
+        text-align: center;
+
+        float: left;
+    }
+    /* 오버플로우를 잡기 위한. %설정 */
+    .imgbox img{
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<h3>display, visiablity 속성의 차이점 + js</h3>
+
+<div id="imgbox1" class="imgbox">
+    BOX1
+    <img src="../images/img_5terre.jpg" alt="">
+    <button onclick="remove();">Remove</button>
+</div>
+<div id="imgbox2" class="imgbox">
+    BOX2
+    <img src="../images/img_lights.jpg" alt="">
+    <button>Hide</button>
+</div>
+<div id="imgbox3" class="imgbox">
+    BOX3
+    <img src="../images/img_forest.jpg" alt="">
+    <button>ResetAll</button>
+</div>
+<script>
+    // 전부 시험침!!
+    // 1. remove버튼 얻어오기
+    const btnRemove = document.querySelector("#imgbox1>button:last-of-type");
+    // 2. hide
+    const btnHide = document.querySelector("#imgbox2>button:last-of-type");
+    // 3. resetall
+    const btnResetAll = document.querySelector("#imgbox3>button:nth-child(2)");
+
+    // 이벤트 등록 1 : js
+    function remove() {
+        // css display:none
+        // 기존 공간까지 사라짐
+        div1 =  btnRemove.parentElement;
+        div1.style.display="none";
+    }
+    
+    // 이벤트 등록 2
+    btnHide.onclick = function(){
+        // css  style="visibility:hidden"
+        // alert(this);
+        // 기존 공간 두면서, 사라짐.
+        div2 = this.parentElement
+        div2.style.visibility="hidden";
+    }
+    
+    // 이벤트 등록 3
+    btnResetAll.addEventListener("click", function(){
+        div1.style.display="block";
+        div2.style.visibility="visible";
+    });
+    // console.log(bthResetAll);
+</script>
+</body>
+</html>

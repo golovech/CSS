@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/faviconlove.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        border: 1px solid black;
+        background: lightblue;
+        
+        /* padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px; */
+        /* 위의 약식 */
+        /* padding: 50px 30px 50px 80px; */
+
+        /* 모두 50px */
+        /* padding: 50px; */
+
+        /* top,bot 50px & r,l 80px */
+        /* padding: 50px 80px; */
+
+        /* top, 왼/우, bottom */
+        /* padding: 50px 30px 80px; */
+    }
+    .demo{
+        width: 200px;
+    }
+
+    /* 21점 */
+    /* div.demo.second{
+        color: white;
+    } */
+
+    /* div:nth-child(2){
+        color: red;
+    } */
+
+    /* 세번째 자식 */
+    /* div:nth-of-type(3){
+        color: lightcoral;
+    } */
+
+     /* :nth-child() 와 :nth-of-type() 의 차이 */
+
+    /* div.demo:nth-last-of-type(2){
+        color: blue;
+    } */
+
+    div:last-of-type{
+        color: tomato;
+        border: 10px solid red;
+        padding: 25px; /* border, padding은 칸 이상으로 더해짐.. */
+
+        /* 패딩, 보더 줘도 다른 칸 너비와 같게 하는 코딩 */
+        box-sizing: border-box;
+    }
+        /* 모든 코딩에 들어가는 코딩. 필수!! 칸 크기 맞춰줌. */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* div의 ~번째 타입을 찾아감. */
+        div:nth-of-type(){
+
+        }
+
+        /* div의 마지막번째  */
+        div:nth-last-child(){
+
+        }
+    
+</style>
+</head>
+<body>
+<!-- 
+    [ padding ]
+    - 테두리의 안쪽 여백
+    - 테두리(border)와 내용물(content) 사이의 간격 == 패딩!(padding)
+    - padding-top / right / bottom / left
+    - px, pt, cm, %, inherit ... (음수 사용 X)
+
+-->
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit est quia, iusto aliquam odio rem ad exercitationem ducimus provident neque. 
+        Officia tenetur, facere magnam nam sit fugit corrupti adipisci sint.</div>
+    <div class="demo">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="demo second">
+        Lorem ipsum dolor sit amet.
+    </div>
+
+    <p>XXX</p>
+
+</body>
+</html>

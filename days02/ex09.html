@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style >
+table{
+    width: 100%;
+    border: 1px solid red;
+}
+td,th{
+    border: 1px solid red;
+    padding: 8px;
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+/* 반응형 테이블 만들기 */
+div{
+    border: 1px solid gray;
+    overflow-x: auto;
+}
+</style>
+</head>
+<body>
+<!-- 
+    [반응형 테이블]
+    : 화면이 너무 작아서 전체 내용이 안 보일 때.
+      가로 스크롤 막대를 표시하는 테이블
+    
+    * 방법
+     1) table 감싸는 컨테이너 역할 div 추가
+     2) overflow-x:auto 속성을 설정
+
+     
+-->
+<div>
+	<table>
+        <caption>반응형 테이블</caption>
+		<tr>
+			<th>Lorem.</th>
+			<th>Repellendus!</th>
+			<th>Libero.</th>
+			<th>Voluptatem.</th>
+			<th>Odio.</th>
+			<th>Corporis.</th>
+			<th>Animi.</th>
+			<th>Id!</th>
+			<th>Autem.</th>
+			<th>Molestias!</th>
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Magnam.</td>
+			<td>Dolorem.</td>
+			<td>Eos!</td>
+			<td>Alias.</td>
+			<td>Repudiandae.</td>
+			<td>Delectus.</td>
+			<td>Dolores.</td>
+			<td>Dolorem.</td>
+			<td>Vitae.</td>
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Eius.</td>
+			<td>Voluptatem!</td>
+			<td>Illo.</td>
+			<td>Ipsa.</td>
+			<td>Fugit.</td>
+			<td>Accusamus.</td>
+			<td>Illum!</td>
+			<td>Temporibus?</td>
+			<td>Officiis.</td>
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Laboriosam.</td>
+			<td>Odio!</td>
+			<td>Impedit.</td>
+			<td>Totam!</td>
+			<td>Accusamus!</td>
+			<td>Saepe!</td>
+			<td>Veniam.</td>
+			<td>Quaerat.</td>
+			<td>Mollitia!</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

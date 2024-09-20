@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #panel, .flip{
+        background-color: rgb(188, 209, 69);
+        color: aliceblue;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid #e6bb00;
+        margin: auto;
+    }
+
+    #panel{
+        display: none;
+    }
+
+    .flip:hover{
+        cursor: pointer;
+        color: rgb(172, 0, 0);
+        font: bold;
+    }
+
+    
+</style>
+</head>
+<body>
+<p class="flip">click to show panel</p>
+<div id="panel">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, corrupti! Reiciendis quas maxime quos excepturi nisi fuga error! Quaerat, quae omnis. Earum labore reiciendis perferendis soluta dolor voluptates ut natus.</p>
+    <p>Temporibus eos libero incidunt quibusdam, quisquam ipsam minima, repellat illo sint totam saepe vel voluptates magnam ratione dignissimos. Incidunt quod quam officiis nesciunt hic quis adipisci doloremque natus ipsum. Perferendis?</p>
+    <p>Atque minus quas doloribus illum, eos natus sint ad aspernatur corrupti totam. Excepturi placeat aliquid autem sed delectus vitae quibusdam optio debitis sapiente modi, repellendus quisquam reprehenderit saepe expedita recusandae.</p>
+</div>
+xxx
+
+<script>
+    // 자바스크립트
+    // const flip = document.querySelector("p.flip");
+    // const panel = document.querySelector("div#panel");
+    // let sw = true;
+
+    // flip.addEventListener("click", function(){
+    //     if (sw) {
+    //         panel.style.display = "block";
+    //     } else {
+    //         panel.style.display = "none";
+    //     }
+    //     sw = !sw;
+    // });
+
+    
+    // 제이쿼리
+    // let sw = true;
+    $("p.flip").on("click",function(){
+        $("#panel").toggle();
+        // if (sw) {
+        //     $("#panel").show();
+            
+        // } else {
+        //     $("#panel").hide();
+            
+        // }
+        // sw=!sw;
+    });
+
+</script>
+</body>
+</html>
