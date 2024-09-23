@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	/* 
+       img 는 인라인 모드다. 인라인은 패딩, 마진 안 먹는다. 
+       가운데 정렬 하려면 block으로 바꿔줘야함.
+    */
+    img{
+        /* 수평으로 가운데 오게 */
+        margin: 0 auto;
+        display: block;
+    }
+    .center p{
+        text-align: center;
+    }
+    .right{
+        width: 300px;
+        border: 3px solid #73ad21;
+
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    * 요소 수직 정렬/수평 정렬
+    1. 블럭모드 요소 : 수평 가운데 정렬 (인라인모드는 블럭으로 바꿔줘야함)
+       margin:0 auto
+    2. 요소 안에 텍스트를 가운데 정렬
+       text-align: center    
+-->
+<div class="center">
+    <p>Hello World!</p>
+ </div>
+ <br>
+<img alt="" src="../images/paris.jpg"
+ style="width: 40%">
+
+<br>
+<div class="right">
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eum amet totam quaerat doloremque optio animi ipsam sapiente. Veniam atque!
+</div>
+</body>
+</html>

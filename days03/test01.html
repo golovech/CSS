@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="imgbox1" class="imgbox">
+    BOX1
+    <img src="../images/bgdesert.jpg" alt=""><button>remove</button>
+</div>
+<div id="imgbox2" class="imgbox">
+    BOX2
+    <img src="../images/img_5terre.jpg" alt=""><button>hide</button>
+</div>
+<div id="imgbox3" class="imgbox">
+    BOX3
+    <img src="../images/falls2.jpg" alt=""><button>resetAll</button>
+</div>
+<script>
+    // 자바스크립트
+    const btnRemove = document.querySelector("#imgbox1>button:last-of-type");
+    const btnHide = document.querySelector("#imgbox2>button:last-child");
+    const btnResetAll = document.querySelector("imgbox3>button:first-of-type");
+
+    function remove(){
+        div1 = btnRemove.parentElement;
+        div1.style.display = "none";
+    }
+
+    function hide(){
+        div2 = btnHide.parentElement;
+        div2.style.display="hidden";
+    }
+
+    function resetAll(){
+        div3=btnResetAll.parentElement;
+        div1.style.display="block";
+        div2.style.display="visible";
+    }
+
+
+    // 제이쿼리
+    // $("#imgbox1>button").on("click",function(){
+    //     $("#imgbox1").hide();
+    // })
+    // $("#imgbox2>button").on("click",function(){
+    //     $("#imgbox2").css("visibility","hidden")
+    // })
+    // $("#imgbox3>button").on("click",function(){
+    //     $("#imgbox1").show();
+    //     $("#imgbox2").css("visibility","visible");
+    // });
+
+
+</script>
+</body>
+</html>

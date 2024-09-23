@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .box{
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<!-- <div class="box">Box - 1</div> -->
+ <script>
+    // [js] div요소(element) 동적 생성 + 스타일 지정
+    // DOM method : createElement 메서드. 객체를 생성함.
+    // 객체 저장할 때 변수는 const를 사용. (var, let도 있지만.. 객체는 const)
+    const divElement = document.createElement("div");
+
+    // {Box1} 을 집어넣을거임.
+    divElement.innerText = "Box - 1";
+
+    // 위 상태로는 페이지가 빈 공백임.
+    // 부모/자식관계 명시해줘야하기 때문.
+    // appendChild : 마지막 자식요소로 추가하겠다.
+    document.body.appendChild(divElement);
+
+    // 스타일 지정 1.
+    // divElement.style.border="1px solid gray";
+    // divElement.style.width="100px";
+    // divElement.style.height="100px";
+    // // css text-align 처럼 -가 있으면 => js에서는 textAlign으로 변경하여 작성.
+    // divElement.style.textAlign="center";
+    
+    // 스타일 지정 2.
+    // div class 속성 box를 추가해보자.
+    // jquery class 속성 추가 : addClass()/removeClass()
+    // js                      classList.add("")/className=""
+    divElement.className="box";
+    
+
+ </script>
+</body>
+</html>

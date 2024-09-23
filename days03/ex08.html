@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    p{
+        background-color: yellow;
+        padding: 20px;
+
+        display: none;
+    }
+
+    /* div 태그에 커서올릴때, p를 보여라. 라는뜻 */
+    /* div:hover p{
+        display: block;
+    }  */
+
+</style>
+</head>
+<body>
+<!-- 
+    :의사클래스
+      ㄴ 요소의 특정 상태를 정의하는 데 사용
+    a:hover
+    input:focus
+    
+    ::의사요소
+      ㄴ 요소의 지정된 부분에 스타일을 지정하는 데 사용
+      ㄴ 첫 글자
+         첫 라인
+         요소의 내용 앞/뒤에 삽입
+-->
+<div>
+    Lorem ipsum dolor sit amet, 
+    consectetur adipisicing elit.
+    Deleniti earum.
+    <p>
+      --- Lorem ipsum dolor.
+    </p>
+</div>
+<script>
+    // js로 , div에 커서 올리면 p자식요소 보이게 하고, 내리면 숨기는 코딩 해보자
+    // const div = document.querySelector("div");
+    // const p = document.querySelector("div>p");
+
+    // div.onmouseover = function(){
+    //     p.style.display="block";
+    // };
+    // div.onmouseout = function(){
+    //     p.style.display="none";
+    // };
+</script>
+<script>
+    // jquery 1.
+    // const div = $("div");
+    // const p = $("div>p");
+
+    // div.on("mouseover",function(){
+    //     p.show();
+    // })
+    // div.on("mouseout",function(){
+    //     p.hide();
+    // });
+
+    // jquery 2.
+    // $("div").hover(function(){ // mouseover
+    //     p.show()
+    // }, function(){ // mouseout
+    //     p.hide
+    // })
+
+    // jquery 3.
+    $("div").hover(function(){
+        $("div>p").toggle();
+    })
+</script>
+</body>
+</html>
