@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--
+    뷰포트 (viewport)
+    1.웹 페이지에서 사용자 화면 상에 볼 수 있는 영역
+    2. 여러 디바이스()마다 표시 영역 다르다 
+    3. 여러 디바이스의 크기에 맞게 웹 페이지의 크기를 제어 해서 화면에 보여 줄 필요가 있다.
+    4.뷰포트 설정
+    meta name = "viewport" content = "width=device-width, initial-scale=1.0"
+     -->
+    <!--
+     [미디어 쿼리]
+     1. css3에 새로 도입된 css 기술....
+     2. 여러 디바이스마다 서로 다른 스타일을 적용할 필요가...
+     3. 뷰포트의 너비/높이 확인
+
+     미디어 타입: all, print, screen, speech
+     -->
+    - 링크태그로 다양한 미디어, 브라우저 창 설정
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" media="screen" href="screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 480px)" href="example1.css">
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            position: relative;
+
+            animation-name: sample;
+
+            /* 처리하는데 걸리는 시간 */
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+
+            /* 애니메이션 시작 전, 종료 후 요소의 스타일 */
+             /* 종료시 마지막 키 프레임 스타일 유지*/
+            animation-fill-mode: forwards;
+            /* 왔다갔다 왕복 하는거임  */
+            animation-direction: alternate-reverse;
+
+             animation:smaple,4s,linear,2s,infinity,s,alternat;
+        }
+
+        /* 규칙 sample  이름  */
+        @keyframes sample{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!--
+css  애니메아숀
+자바스크립트를 사용하지 않고도 css를 사용해서 애니메이션 처리를 할 수 있다.
+키프레임(keyframes) : 애니메이션의 움직임을 정의하는 중간 단계를 말한다. 특정 시간에 가지는 스타일
+키프레임이 연결 되어져서 애니메이션 효과를 나타낸다.
+
+@keyframes 애니메이션규치{
+     -->
+<div></div>
+</body>
+
+</html>
